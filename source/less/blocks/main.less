@@ -6,7 +6,8 @@
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 27px;
   line-height: 30px;
-  font-weight: 700;;
+  font-weight: 700;
+  margin: 0;
 }
 
 .main__list {
@@ -31,4 +32,65 @@
   line-height: 24px;
   text-decoration: none;
   color: @white;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__title {
+    max-width: 260px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .main__item a {
+    display: block;
+    max-width: 55px;
+    padding-left: 30px;
+    padding-top: 24px;
+    padding-bottom: 31px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main__title {
+    max-width: 668px;
+    font-size: 43px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  .main__list {
+    display: grid;
+    grid-template-columns: 334px 334px;
+  }
+
+  .main__item a {
+    display: block;
+    max-width: 131px;
+    padding-left: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main__title {
+    margin: 0 auto;
+    max-width: 700px;
+    font-size: 53px;
+    line-height: 57px;
+    text-align: center;
+  }
+
+  .main__list {
+    grid-template-columns: 525px 525px;
+    justify-content: center;
+  }
+
+  .main__item a {
+    padding-top: 25px;
+    padding-bottom: 17px;
+  }
 }

@@ -1,4 +1,7 @@
 .reviews {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding-bottom: 45px;
 }
 
@@ -24,4 +27,34 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    flex-direction: row;
+    width: 668px;
+  }
+
+  .reviews__container {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+
+  .reviews__toggles {
+    order: 3;
+  }
+
+  .reviews__text {
+    font-size: 17px;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    margin-left: 175px;
+    width: 875px;
+  }
+
 }

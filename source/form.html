@@ -2,37 +2,55 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo" href="index.html">
-        <img src="img/logotype-phone.svg" width="86" height="35" alt="Интернет-магазин Мишка">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
+      <div class="main-header__wrapper container">
+        <a class="main-header__logo" href="index.html">
+          <img src="img/logotype-phone.svg" width="86" height="35" alt="Интернет-магазин Мишка">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Вязание на заказ</a>
+              <a>Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="main-nav__list user-list">
+        </nav>
+        <div class="user-list">
+          <ul class="user-list__container">
             <li class="user-list__item">
-              <a href="#">Поиск по сайту</a>
+              <a href="#">
+                <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 18 18"><path fill="#000" d="m17.693 16.057-3.477-3.477c1.023-1.33 1.534-2.966 1.534-4.705C15.75 3.477 12.273 0 7.875 0S0 3.477 0 7.875s3.477 7.875 7.875 7.875c1.739 0 3.375-.614 4.704-1.534l3.478 3.477c.204.205.409.307.818.307.614 0 1.125-.511 1.125-1.125 0-.204-.102-.511-.307-.818ZM2.25 7.875c0-3.068 2.557-5.625 5.625-5.625S13.5 4.807 13.5 7.875 10.943 13.5 7.875 13.5 2.25 10.943 2.25 7.875Z" opacity=".2"/>
+                </svg>
+                <span class="user-list__text">Поиск по сайту</span>
+              </a>
             </li>
             <li class="user-list__item">
               <a href="#">Корзина: пока пуста</a>
             </li>
           </ul>
         </div>
-      </nav>
+        <div class="user-sale">
+          <ul class="user-sale__list">
+            <li class="user-sale__item">
+              <a href="#">Новые поступления</a>
+            </li>
+            <li class="user-sale__item">
+              <a href="#">Распродажа</a>
+            </li>
+          </ul>
+        </div>
+        <span class="main-header__text">Бесплатная доставка по России</span>
+      </div>
     </header>
     <main class="main-form-container">
       <section class="main-form-container__wrapper page-title">
@@ -44,7 +62,7 @@
           Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
         </p>
         <form class="form__wrapper" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="form__type">
+          <fieldset class="form__fieldset form__type">
             <h3 class="form__title">ТИП</h3>
             <ul class="form__list form__list--type">
               <li class="form__type-item">
@@ -52,7 +70,7 @@
                   <input class="form__type-input" type="radio" name="accessory" value="accessory">
                   Аксессуар для интерьера
                 </label>
-            </li>
+              </li>
               <li class="form__type-item">
                 <label class="form__type-label">
                   <input class="form__type-input" type="radio" name="toy" value="toy">
@@ -61,7 +79,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__color">
+          <fieldset class="form__fieldset form__color">
             <h3 class="form__title">ЦВет</h3>
             <ul class="form__list form__list--color">
               <li class="form__color-item">
@@ -102,7 +120,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__name">
+          <fieldset class="form__fieldset form__name">
             <h3 class="form__title">ФИО</h3>
             <ul class="form__list form__list--name">
               <li class="form__name-item">
@@ -119,15 +137,15 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__phone">
+          <fieldset class="form__fieldset form__phone">
             <h3 class="form__title">тел</h3>
             <input class="form__phone-input" type="text" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
           </fieldset>
-          <fieldset class="form__email">
+          <fieldset class="form__fieldset form__email">
             <h3 class="form__title">E-mail</h3>
             <input class="form__email-input" type="email" id="email" name="email" placeholder="Ваш Email*">
           </fieldset>
-          <fieldset class="form__info">
+          <fieldset class="form__fieldset form__info">
             <h3 class="form__title">Доп</h3>
             <textarea class="form__info-text" id="info" name="info" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
@@ -139,7 +157,10 @@
       </section>
     </main>
     <footer class="main-footer">
-      <div class="main-footer__wrapper">
+      <div class="main-footer__wrapper container">
+        <a class="main-footer__logo" href="index.html">
+          <img src="img/logotype-phone.svg" width="86" height="35" alt="Интернет-магазин Мишка">
+        </a>
         <div class="main-footer__social social">
           <ul class="social__list">
             <li class="social__item">

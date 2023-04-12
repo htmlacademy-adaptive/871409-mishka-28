@@ -1,0 +1,34 @@
+@media (max-width: @mobile-width-only) {
+  .user-sale {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .user-sale {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-sale {
+    display: block;
+    order: 4;
+  }
+
+  .user-sale__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .user-sale__item a {
+    padding-right: 45px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    text-decoration: none;
+    color: @black;
+  }
+}
