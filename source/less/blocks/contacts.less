@@ -1,11 +1,36 @@
 .contacts__info {
   margin: 0;
+  padding: 0;
   font-size: 14px;
   line-height: 30px;
   color: @dark-gray;
+  list-style-type: none;
 }
 
 .contacts__description-link {
   text-decoration: none;
   color: @dark-gray;
+}
+
+.contacts__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__info {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__info {
+    min-width: 335px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    margin-left: 175px;
+  }
+
 }
