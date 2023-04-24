@@ -1,9 +1,3 @@
-@media (max-width: @mobile-width-only) {
-  .container {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
 
 @media (min-width: @tablet-width) {
   .container {
@@ -13,5 +7,9 @@
 }
 
 @media (min-width: @desktop-width) {
-
+  .container {
+    &--desktop {
+    padding-left: 225px;
+    }
+  }
 }

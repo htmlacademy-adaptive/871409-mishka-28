@@ -2,17 +2,27 @@
   padding-bottom: 31px;
 }
 
+.main__image-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 283px;
+  background-color: #f9f9f9;
+  background-image: url(../../img/background-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .main__title {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
   margin: 0;
+  padding-top: 70px;
 }
 
 .main__list {
   margin: 0;
-  padding: 0;
   list-style-type: none;
 }
 
@@ -41,12 +51,17 @@
   }
 
   .main__title {
-    max-width: 260px;
     margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
     text-align: center;
   }
 
-  .main__item a {
+  .main__list {
+    padding: 0;
+  }
+
+  .main__link {
     display: block;
     max-width: 55px;
     padding-left: 30px;
@@ -56,8 +71,23 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main__image-wrapper {
+    height: 570px;
+    margin-top: -75px;
+    background-image: url(../../img/index-background-tablet.jpg);
+    background-position: 50% -60px;
+    background-repeat: no-repeat;
+    border-top: 1px solid @gray;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../../img/index-background-tablet@2x.jpg);
+      background-size: 746px auto;
+    }
+  }
+
   .main__title {
     max-width: 668px;
+    padding-top: 110px;
     font-size: 43px;
     line-height: 50px;
     text-align: center;
@@ -68,17 +98,51 @@
     grid-template-columns: 334px 334px;
   }
 
-  .main__item a {
+  .main__link {
     display: block;
     max-width: 131px;
     padding-left: 36px;
+    padding-top: 25px;
+    padding-bottom: 22px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .main {
+    position: relative;
+    padding-bottom: 135px;
+  }
+
+  .main::after {
+    position: absolute;
+    content: "";
+    background-image: url(../../img/zigzag-line-desktop.svg);
+    width: 100%;
+    height: 34px;
+    bottom: 115px;
+    left: 0;
+  }
+
+  .main__image-wrapper {
+    margin: 0 auto;
+    height: 610px;
+    background-image: url(../../img/index-background-desktop.jpg);
+    background-size: cover;
+    margin-top: -90px;
+    background-position: 50% -16px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../../img/index-background-desktop@2x.jpg);
+      background-size: 1150px auto;
+    }
+  }
+
   .main__title {
     margin: 0 auto;
     max-width: 700px;
+    padding-top: 142px;
     font-size: 53px;
     line-height: 57px;
     text-align: center;
@@ -90,7 +154,7 @@
   }
 
   .main__item a {
-    padding-top: 25px;
-    padding-bottom: 17px;
+    padding-top: 26px;
+    padding-bottom: 30px;
   }
 }
