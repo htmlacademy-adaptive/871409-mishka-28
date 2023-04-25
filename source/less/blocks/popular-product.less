@@ -1,11 +1,22 @@
-/*.popular-product {
+.popular-product {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-bottom: 36px;
-}*/
+  position: relative;
+  margin-bottom: 75px;
+}
+
+.popular-product::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+}
+
+.popular-product__wrapper {
+  display: flex;
+}
 
 .popular-product__subtitle {
+  margin: 0;
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
@@ -21,44 +32,104 @@
 
 .popular-product__characteristics {
   display: flex;
+  padding-bottom: 8px;
+  padding-left: 0;
   flex-direction: row;
   font-size: 15px;
   line-height: 20px;
+  list-style-type: none;
   color: @dark-gray;
+  border-bottom: 1px solid @gray;
+}
+
+.popular-product__parametr {
+  min-width: 97px;
 }
 
 .popular-product__price {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   color: @dark-gray;
 }
 
-.popular-product__characteristics {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.popular-product__button-wrapper {
+  display: flex;
+  justify-content: center;
 }
+
+@media (max-width: @mobile-width-only) {
+  .popular-product {
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .popular-product__wrapper {
+    flex-direction: column;
+  }
+
+  .popular-product__container {
+    padding-bottom: 28px;
+  }
+
+  .popular-product__price-wrapper {
+    order: 4;
+  }
+
+  .popular-product__image-wrapper {
+    padding-bottom: 25px;
+  }
+
+  .popular-product::after {
+    bottom: -30px;
+    height: 6px;
+    background-image: url(../../img/zigzag-line-mobile.svg);
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .popular-product {
-    width: 668px;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
+
   .popular-product__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .popular-product__title-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    min-width: 668px;
+    padding-bottom: 32px;
   }
 
   .popular-product__container {
     display: flex;
     flex-direction: column;
     max-width: 292px;
+    padding-right: 42px;
   }
+
+  .popular-product__price-wrapper {
+    order: 4;
+    margin-top: -110px;
+  }
+
 
   .popular-product__subtitle {
     width: 100px;
+    text-align: center
   }
 
   .popular-product__parametr {
@@ -73,12 +144,51 @@
   .popular-product__price {
     font-size: 20px;
   }
+
+  .popular-product__button {
+    width: 292px;
+  }
+
+  .popular-product__image {
+    width: 334px;
+    height: 404px;
+  }
+
+  .popular-product::after {
+    bottom: -60px;
+    height: 17px;
+    background-image: url(../../img/zigzag-line-tablet.svg);
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .popular-product__wrapper {
+  .popular-product {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .popular-product::after {
+    width: 1050px;
+    left: 50px;
+  }
+
+  .popular-product__container {
+    padding-left: 175px;
+  }
+
+  .popular-product__image-wrapper {
+    margin-top: -150px;
+  }
+
+  .popular-product__image {
+    width: 525px;
+    height: 636px;
+  }
+
+  .popular-product__title-wrapper {
     justify-content: flex-start;
-    padding-left: 32px;
+    padding-left: 82px;
+    z-index: 1;
   }
 
   .popular-product__title {
@@ -89,7 +199,7 @@
     padding-right: 42px;
   }
 
-  .popular-product__container {
+  .popular-product__price-wrapper {
     padding-left: 175px;
   }
 }
