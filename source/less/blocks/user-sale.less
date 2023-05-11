@@ -1,3 +1,12 @@
+.user-sale__item:hover {
+  opacity: 0.6;
+}
+
+.user-sale__item:active {
+  opacity: 0.3;
+}
+
+
 @media (max-width: @mobile-width-only) {
   .user-sale {
     display: none;
@@ -16,7 +25,7 @@
   }
 
   .user-sale__text {
-    padding-top: 20px;
+    padding-top: 15px;
     padding-right: 0;
     padding-left: 20px;
     padding-bottom: 20px;
@@ -35,10 +44,13 @@
     justify-content: space-between;
     order: 4;
     min-width: 1050px;
-    padding-top: 12px;
+    padding-top: 16px;
     z-index: 2;
   }
 
+  .user-sale__text {
+    padding-top: 0;
+  }
 
   .user-sale__list {
     display: flex;

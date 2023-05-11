@@ -12,10 +12,31 @@
   font-weight: 700;
 }
 
+.user-list__item:hover {
+  opacity: 0.6;
+}
+
+.user-list__item:active {
+  opacity: 0.3;
+}
+
+.user-list__icon {
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.user-list__item:hover .user-list__icon {
+  fill: #63d1bb;
+}
+
+.user-list__item:active .user-list__icon {
+  fill: #63d1bb;
+  opacity: 0.3;
+}
+
 .user-list__item a {
   display: block;
-  padding-top: 28px;
-  padding-left: 30px;
+  padding-top: 25px;
+  padding-left: 28px;
   padding-bottom: 28px;
   text-decoration: none;
   color: @black;
@@ -31,8 +52,19 @@
 }
 
 @media (max-width: @mobile-width-only) {
+  .user-list__item a {
+    position: relative;
+  }
+
   .user-list__icon {
-    padding-right: 26px;
+    position: absolute;
+    top: 29px;
+    left: 32px;
+    margin-right: 26px;
+  }
+
+  .user-list__text {
+    padding-left: 48px;
   }
 
 }
@@ -61,7 +93,8 @@
 
   .user-list__item a {
     padding-bottom: 32px;
-    padding-top: 32px;
+    padding-top: 35px;
+    padding-left: 32px;
     border: none;
   }
 
@@ -74,6 +107,10 @@
     display: none;
     }
   }
+
+  .user-list__text {
+    padding-left: 25px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -83,10 +120,10 @@
   }
 
   .user-list__item a {
-    padding-top: 32px;
+    padding-top: 34px;
   }
 
   .user-list__icon {
-    margin-right: 30px;
+    margin-right: 2px;
   }
 }

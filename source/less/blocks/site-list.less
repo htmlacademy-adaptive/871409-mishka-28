@@ -12,9 +12,17 @@
   font-weight: 700;
 }
 
+.site-list__item:hover {
+  opacity: 0.6;
+}
+
+.site-list__item:active {
+  opacity: 0.3;
+}
+
 .site-list__item a {
   display: block;
-  padding: 28px 76px;
+  padding: 27px 76px;
   padding-bottom: 28px;
   text-decoration: none;
   color: @black;
@@ -35,10 +43,12 @@
   .site-list__item a {
     display: block;
     min-width: 167px;
-    padding-top: 20px;
-    padding-right: 30px;
+    padding-top: 18px;
+    padding-right: 0;
     padding-left: 0;
     padding-bottom: 20px;
+    font-size: 15px;
+    line-height: 24px;
     border: none;
   }
 }
@@ -52,7 +62,9 @@
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-    padding-right: 16px;
+    padding-right: 35px;
+    font-size: 17px;
+    line-height: 24px;
   }
 
   .site-list__item:not(:first-child) {

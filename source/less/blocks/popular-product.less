@@ -1,7 +1,7 @@
 .popular-product {
   display: flex;
   position: relative;
-  margin-bottom: 75px;
+  padding-bottom: 42px;
 }
 
 .popular-product::after {
@@ -15,8 +15,14 @@
   display: flex;
 }
 
+.popular-product__title {
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
 .popular-product__subtitle {
   margin: 0;
+  margin-bottom: 15px;
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
@@ -25,6 +31,8 @@
 }
 
 .popular-product__description {
+  margin: 0;
+  margin-bottom: 30px;
   font-size: 15px;
   line-height: 24px;
   color: @dark-gray;
@@ -32,7 +40,9 @@
 
 .popular-product__characteristics {
   display: flex;
-  padding-bottom: 8px;
+  margin: 0;
+  margin-bottom: 8px;
+  padding-bottom: 11px;
   padding-left: 0;
   flex-direction: row;
   font-size: 15px;
@@ -46,10 +56,14 @@
   min-width: 97px;
 }
 
+.popular-product__price-wrapper {
+  position: relative;
+}
+
 .popular-product__price {
   display: flex;
   justify-content: center;
-  padding-bottom: 24px;
+  margin-bottom: 27px;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -73,7 +87,7 @@
   }
 
   .popular-product__container {
-    padding-bottom: 28px;
+    padding-bottom: 20px;
   }
 
   .popular-product__price-wrapper {
@@ -81,11 +95,11 @@
   }
 
   .popular-product__image-wrapper {
-    padding-bottom: 25px;
+    margin-bottom: 25px;
   }
 
   .popular-product::after {
-    bottom: -30px;
+    bottom: 0;
     height: 6px;
     background-image: url(../../img/zigzag-line-mobile.svg);
   }
@@ -97,38 +111,47 @@
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-bottom: 70px;
   }
 
   .popular-product__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .popular-product__title-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     min-width: 668px;
-    padding-bottom: 32px;
+    margin-bottom: 34px;
+    padding-top: 20px;
+  }
+
+  .popular-product__title {
+    margin: 0;
   }
 
   .popular-product__container {
     display: flex;
     flex-direction: column;
     max-width: 292px;
-    padding-right: 42px;
   }
 
   .popular-product__price-wrapper {
     order: 4;
-    margin-top: -110px;
+    margin-top: -108px;
   }
-
 
   .popular-product__subtitle {
     width: 100px;
+    padding-top: 6px;
+    padding-right: 24px;
+    line-height: 17px;
     text-align: center
   }
 
@@ -137,11 +160,14 @@
 }
 
   .popular-product__description {
+    margin-bottom: 48px;
+    padding-bottom: 0;
     font-size: 17px;
     line-height: 30px;
 }
 
   .popular-product__price {
+    margin-bottom: 34px;
     font-size: 20px;
   }
 
@@ -155,9 +181,17 @@
   }
 
   .popular-product::after {
-    bottom: -60px;
+    bottom: 0;
     height: 17px;
     background-image: url(../../img/zigzag-line-tablet.svg);
+  }
+
+  .popular-product__image-wrapper {
+    padding-top: 12px;
+  }
+
+  .popular-product__value {
+    margin-left: -2px;
   }
 }
 
@@ -165,6 +199,13 @@
   .popular-product {
     display: flex;
     flex-direction: row;
+    padding-top: 55px;
+    padding-bottom: 94px;
+  }
+
+  .popular-product__wrapper {
+    padding-left: 175px;
+    padding-right: 0;
   }
 
   .popular-product::after {
@@ -172,12 +213,9 @@
     left: 50px;
   }
 
-  .popular-product__container {
-    padding-left: 175px;
-  }
-
   .popular-product__image-wrapper {
-    margin-top: -150px;
+    margin-top: -154px;
+    padding-top: 0;
   }
 
   .popular-product__image {
@@ -187,7 +225,9 @@
 
   .popular-product__title-wrapper {
     justify-content: flex-start;
-    padding-left: 82px;
+    margin-bottom: 36px;
+    padding-top: 0;
+    padding-left: 32px;
     z-index: 1;
   }
 
@@ -196,10 +236,19 @@
   }
 
   .popular-product__subtitle {
-    padding-right: 42px;
+    margin-right: 42px;
+    padding-right: 0;
+    padding-top: 8px;
   }
 
-  .popular-product__price-wrapper {
-    padding-left: 175px;
+  .popular-product__description {
+    margin-bottom: 60px;
+  }
+
+  .popular-product::after {
+    bottom: 0;
+    left: 0;
+    height: 23px;
+    background-image: url(../../img/zigzag-line-gray-desktop.svg);
   }
 }

@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 16px;
-  padding-bottom: 16px;
+  padding-bottom: 14px;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
@@ -11,8 +11,17 @@
   text-transform: uppercase;
   outline: 2px solid @dark-gray;
   border: none;
-  background: inherit;
+  background: @white;
   color: @dark-gray;
+}
+
+.button:hover {
+  color: @white;
+  background-color: @dark-gray;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: @mobile-width-only) {
