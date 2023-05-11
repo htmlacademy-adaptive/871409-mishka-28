@@ -28,7 +28,8 @@
   }
 
   .page-title__text {
-    padding-bottom: 85px;
+    padding-top: 100px;
+    padding-bottom: 88px;
     font-size: 43px;
     line-height: 50px;
   }
@@ -36,7 +37,13 @@
 
 @media (min-width: @desktop-width) {
   .page-title__text {
+    padding-bottom: 114px;
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .page-title::after {
+    height: 34px;
+    background-image: url(../../img/zigzag-line-white-desktop.svg);
   }
 }
