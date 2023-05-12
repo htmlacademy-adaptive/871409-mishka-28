@@ -98,6 +98,8 @@
 }
 
 .form__text {
+  margin-top: 0;
+  margin-bottom: 32px;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -160,7 +162,7 @@
   height: 52px;
   padding-top: 4px;
   padding-left: 0;
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
@@ -252,7 +254,7 @@
   height: 142px;
   margin-top: 18px;
   padding: 16px;
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
@@ -274,14 +276,9 @@
   opacity: 0.3;
 }
 
-.form__info-text:active  .form__info-text::placeholder {
+.form__info-text:active .form__info-text::placeholder {
   border: 2px solid #62d1ba;
   opacity: 1;
-}
-
-.form__text {
-  margin-top: 0;
-  margin-bottom: 32px;
 }
 
 .form__button {
@@ -311,7 +308,7 @@
   .form__color-input:checked + .form__color-control {
     width: 38px;
     height: 38px;
-    background-image: url(../img/icon-input-mobile.svg);
+    background-image: url("../img/icon-input-mobile.svg");
   }
 
   .form__title::after {
@@ -380,6 +377,8 @@
   .form__buttons {
     display: flex;
     justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .form__list {
@@ -451,7 +450,7 @@
   .form__color-input:checked + .form__color-control {
     width: 52px;
     height: 52px;
-    background-image: url(../img/icon-input-tablet.svg);
+    background-image: url("../img/icon-input-tablet.svg");
   }
 
   .form__container {
@@ -493,6 +492,7 @@
       top: 13px;
       right: 25px;
     }
+
     &--email {
       top: 17px;
       right: 22px;
@@ -525,11 +525,6 @@
   .form__info {
     padding-top: 32px;
     padding-bottom: 58px;
-  }
-
-  .form__buttons {
-    padding-left: 50px;
-    padding-right: 50px;
   }
 
   .form__button {
