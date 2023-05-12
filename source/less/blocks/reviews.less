@@ -82,7 +82,7 @@
   .reviews::after {
     bottom: -10px;
     height: 6px;
-    background-image: url(../../img/zigzag-line-mobile.svg);
+    background-image: url("../img/zigzag-line-mobile.svg");
   }
 }
 
@@ -93,13 +93,13 @@
     justify-content: space-between;
     padding-top: 80px;
     padding-bottom: 76px;
-    background-image: url(../img/review-backgtound-tablet.jpg);
+    background-image: url("../img/review-backgtound-tablet.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 350px 457px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url(../img/review-backgtound-tablet2x.jpg);
+      background-image: url("../img/review-backgtound-tablet2x.jpg");
     }
   }
 
@@ -120,6 +120,11 @@
 
   .reviews__toggles {
     order: 3;
+    position: absolute;
+    content: "";
+    right: 70px;
+    bottom: 74px;
+    width: 137px;
   }
 
   .reviews__text {
@@ -136,23 +141,13 @@
   .reviews::after {
     bottom: -30px;
     height: 17px;
-    background-image: url(../../img/zigzag-line-tablet.svg);
-  }
-
-  .reviews__toggles {
-    position: absolute;
-    content: "";
-    right: 70px;
-    bottom: 74px;
-    width: 137px;
-
+    background-image: url("../img/zigzag-line-tablet.svg");
   }
 
   .reviews__pagination {
     padding: 0;
     border: none;
   }
-
 }
 
 @media (min-width: @desktop-width) {
@@ -174,12 +169,11 @@
     width: 1050px;
     height: 23px;
     left: 0;
-    background-image: url(../../img/zigzag-line-gray-desktop.svg);
+    background-image: url("../img/zigzag-line-gray-desktop.svg");
   }
 
   .reviews__toggles {
     right: 20px;
     bottom: 129px;
   }
-
 }

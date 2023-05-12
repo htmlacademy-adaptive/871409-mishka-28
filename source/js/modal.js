@@ -21,4 +21,3 @@ window.addEventListener('keydown', function(evt) {
     overlay.classList.remove('modal__overlay--close');
   }
 })
-
