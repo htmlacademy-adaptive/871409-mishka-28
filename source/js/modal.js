@@ -1,23 +1,29 @@
 let modalOpen = document.querySelector(".popular-product__button")
 let modalWindow = document.querySelector(".modal")
-let overlay = document.querySelector(".modal__overlay")
+
+function closeModal(modal) {
+  modal.classList.remove('modal--open');
+}
+
+function openModal(modal) {
+  modal.classList.add('modal--open');
+}
 
 modalOpen.addEventListener('click', function(event) {
   event.preventDefault();
-  modalWindow.classList.add('modal--open');
-  overlay.classList.add('modal__overlay--close');
+  openModal(modalWindow)
 })
 
-overlay.addEventListener('click', function(event) {
+modalWindow.addEventListener('click', function(event) {
   event.preventDefault();
-  modalWindow.classList.remove('modal--open');
-  overlay.classList.remove('modal__overlay--close');
+  if(event.target.classList.contains('modal')) {
+    closeModal(modalWindow)
+  }
 })
 
 window.addEventListener('keydown', function(evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    modalWindow.classList.remove('modal--open');
-    overlay.classList.remove('modal__overlay--close');
+    closeModal(modalWindow)
   }
 })

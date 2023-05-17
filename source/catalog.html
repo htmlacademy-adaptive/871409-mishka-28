@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
@@ -61,7 +67,7 @@
           <div class="user-list">
             <ul class="user-list__container">
               <li class="user-list__item">
-                <a href="#">
+                <a href="#" aria-label="поиск по сайту">
                   <svg class="user-list__icon" width="18" height="18">
                     <use xlink:href="#icon-search"></use>
                   </svg>
@@ -104,8 +110,11 @@
           <li class="product-cards__item">
             <a class="product-cards__link">
               <picture>
+                <source media="(min-width: 1150px)" type="image/webp" srcset="img/product-1-desktop.webp 1x, img/product-1-desktop@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/product-1-desktop.jpg 1x, img/product-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/product-1-tablet.webp 1x, img/product-1-tablet.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/product-1-tablet.jpg 1x, img/product-1-tablet.jpg 2x">
+                <source type="image/webp" srcset="img/product-1-mobile.webp 1x, img/product-1-mobile.webp 2x">
                 <img class="product-cards__image" src="img/product-1-mobile.jpg" srcset="img/product-1-mobile@2x.jpg 2x" width="260" height="195" alt="Зайчик-попрыгайчик">
               </picture>
               <div class="product-cards__container">
@@ -126,8 +135,11 @@
           <li class="product-cards__item">
             <a class="product-cards__link">
               <picture>
+                <source media="(min-width: 1150px)" type="image/webp" srcset="img/product-2-desktop.webp 1x, img/product-2-desktop@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/product-2-desktop.jpg 1x, img/product-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/product-2-tablet.webp 1x, img/product-2-tablet.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/product-2-tablet.jpg 1x, img/product-2-tablet.jpg 2x">
+                <source type="image/webp" srcset="img/product-2-mobile.webp 1x, img/product-2-mobile.webp 2x">
                 <img class="product-cards__image" src="img/product-2-mobile.jpg" srcset="img/product-2-mobile@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья">
               </picture>
               <div class="product-cards__container">
@@ -148,8 +160,11 @@
           <li class="product-cards__item">
             <a class="product-cards__link">
               <picture>
+                <source media="(min-width: 1150px)" type="image/webp" srcset="img/product-3-desktop.webp 1x, img/product-3-desktop@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/product-3-desktop.jpg 1x, img/product-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/product-3-tablet.webp 1x, img/product-3-tablet.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/product-3-tablet.jpg 1x, img/product-3-tablet.jpg 2x">
+                <source type="image/webp" srcset="img/product-3-mobile.webp 1x, img/product-3-mobile.webp 2x">
                 <img class="product-cards__image" src="img/product-3-mobile.jpg" srcset="img/product-3-mobile@2x.jpg 2x" width="260" height="195" alt="Большая корзинка для игрушек">
               </picture>
               <div class="product-cards__container product-cards__container--big-basket">
@@ -179,8 +194,11 @@
           </div>
           <div class="product-process__image-wrapper">
             <picture>
+              <source media="(min-width: 1150px)" type="image/webp" srcset="img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x">
               <img class="product-process__image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Видео процесса производства">
             </picture>
             <a class="product-process__link" href="#">
@@ -202,7 +220,7 @@
         <div class="main-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="ссылка на группу ВК htmlacademy">
                 <span class="visually-hidden">Мы в Вконтакте</span>
                 <svg class="social__icon" width="28" height="23">
                   <use xlink:href="#icon-vk"></use>
@@ -210,7 +228,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="ссылка на ютюб-канал htmlacademy">
                 <span class="visually-hidden">Мы в Ютубе</span>
                 <svg class="social__icon" width="28" height="23">
                   <use xlink:href="#icon-youtube"></use>
@@ -218,7 +236,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" aria-label="ссылка на телеграм канал htmlacademy">
                 <span class="visually-hidden">Мы в Телеграме</span>
                 <svg class="social__icon" width="28" height="23">
                   <use xlink:href="#icon-telegram"></use>
@@ -229,7 +247,7 @@
         </div>
         <div class="main-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="ссылка на телеграм канал htmlacademy">
             <span class="visually-hidden"> HTML Academy</span>
             <svg class="copyright__icon" width="27" height="35">
               <use xlink:href="#icon-htmlacademy"></use>
