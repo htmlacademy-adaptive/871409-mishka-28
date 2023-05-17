@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
@@ -89,7 +95,7 @@
           <div class="user-list">
             <ul class="user-list__container">
               <li class="user-list__item">
-                <a href="#">
+                <a href="#" aria-label="поиск по сайту">
                   <svg class="user-list__icon" width="18" height="18">
                     <use xlink:href="#icon-search"></use>
                   </svg>
@@ -179,8 +185,11 @@
           </div>
           <div class="popular-product__image-wrapper">
             <picture>
+              <source media="(min-width: 1150px)" type="image/webp" srcset="img/popular-product-desktop.webp 1x, img/popular-product-desktop-x2.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/popular-product-desktop.jpg 1x, img/popular-product-desktop-x2.jpg 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/popular-product-tablet.webp 1x, img/popular-product-tablet-x2.webp 2x">
               <source media="(min-width: 768px)" srcset="img/popular-product-tablet.jpg 1x, img/popular-product-tablet-x2.jpg 2x">
+              <source type="image/webp" srcset="img/popular-product-mobile.webp 1x, img/popular-product-mobile-x2.webp 2x">
               <img class="popular-product__image" src="img/popular-product-mobile.jpg" srcset="img/popular-product-mobile-x2.jpg 2x" width="260" height="315" alt="Вязаная корзинка">
             </picture>
           </div>
@@ -297,7 +306,7 @@
         <div class="main-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="ссылка на группу ВК htmlacademy">
                 <span class="visually-hidden">Мы в Вконтакте</span>
                 <svg class="social__icon" width="28" height="23">
                   <use xlink:href="#icon-vk"></use>
@@ -305,7 +314,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="ссылка на ютюб-канал htmlacademy">
                 <span class="visually-hidden">Мы в Ютубе</span>
                 <svg class="social__icon" width="28" height="23">
                   <use xlink:href="#icon-youtube"></use>
@@ -313,7 +322,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" aria-label="ссылка на телеграм канал htmlacademy">
                 <span class="visually-hidden">Мы в Телеграме</span>
                 <svg class="social__icon" width="28" height="23">
                   <use xlink:href="#icon-telegram"></use>
@@ -324,7 +333,7 @@
         </div>
         <div class="main-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="ссылка на телеграм канал htmlacademy">
             <span class="visually-hidden"> HTML Academy</span>
             <svg class="copyright__icon" width="27" height="35">
               <use xlink:href="#icon-htmlacademy"></use>
@@ -362,7 +371,6 @@
         </div>
       </div>
     </section>
-    <div class="modal__overlay"></div>
     <script src="js/script.js"></script>
     <script src="js/map.js"></script>
     <script src="js/modal.js"></script>
