@@ -1,5 +1,5 @@
-let modalOpen = document.querySelector(".popular-product__button")
-let modalWindow = document.querySelector(".modal")
+let modalOpen = document.querySelector('.modal-link')
+let modalWindow = document.querySelector('.modal')
 
 function closeModal(modal) {
   modal.classList.remove('modal--open');

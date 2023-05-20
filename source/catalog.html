@@ -123,7 +123,7 @@
                 <div class="product-cards__wrapper">
                   <p class="product-cards__price">1 200 руб.</p>
                   <div class="product-cards__order">
-                    <svg class="product-cards__icon" width="21" height="18">
+                    <svg class="product-cards__icon modal-link" width="21" height="18">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
                     <span class="visually-hidden">положить в корзину</span>
@@ -148,7 +148,7 @@
                 <div class="product-cards__wrapper">
                   <p class="product-cards__price">690 руб.</p>
                   <div class="product-cards__order">
-                    <svg class="product-cards__icon" width="21" height="18">
+                    <svg class="product-cards__icon modal-link" width="21" height="18">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
                     <span class="visually-hidden">положить в корзину</span>
@@ -173,7 +173,7 @@
                 <div class="product-cards__wrapper">
                   <p class="product-cards__price">1 500 руб.</p>
                   <div class="product-cards__order">
-                    <svg class="product-cards__icon" width="21" height="18">
+                    <svg class="product-cards__icon modal-link" width="21" height="18">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
                     <span class="visually-hidden">положить в корзину</span>
@@ -256,6 +256,36 @@
         </div>
       </div>
     </footer>
+    <section class="modal">
+      <div class="modal__container">
+        <h2 class="modal__title">
+          Добавить в корзину
+        </h2>
+        <div class="modal__info">
+          <form class="modal__form" method="get">
+            <fieldset class="modal__fieldset">
+              <p class="modal__text">Выберите размер:</p>
+              <ul class="modal__list">
+                <li class="modal__item modal__item--active">
+                  <input class="modal__input visually-hidden" type="radio" name="size" id="size-s" value="s" checked>
+                  <label class="modal__label" for="size-s">S</label>
+                </li>
+                <li class="modal__item">
+                  <input class="modal__input visually-hidden" type="radio" name="size" id="size-m" value="m">
+                  <label class="modal__label" for="size-m">M</label>
+                </li>
+                <li class="modal__item">
+                  <input class="modal__input visually-hidden" type="radio" name="size" id="size-l" value="l">
+                  <label class="modal__label" for="size-l">L</label>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+          <button class="modal__button button" type="button">Добавить</button>
+        </div>
+      </div>
+    </section>
     <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>
