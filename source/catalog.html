@@ -71,7 +71,7 @@
                   <svg class="user-list__icon" width="18" height="18">
                     <use xlink:href="#icon-search"></use>
                   </svg>
-                  <span class="user-list__text--hidden">Поиск по сайту</span>
+                  <span class="user-list__text user-list__text--hidden">Поиск по сайту</span>
                 </a>
               </li>
               <li class="user-list__item">
@@ -104,7 +104,7 @@
       <section class="main-catalog-container__wrapper container page-title">
         <h1 class="main-catalog-container__title page-title__text">Каталог товаров</h1>
       </section>
-      <section class="product-cards container--section">
+      <section class="product-cards section-container">
         <h2 class="visually-hidden">Карточки товаров</h2>
         <ul class="product-cards__list container">
           <li class="product-cards__item">
@@ -123,7 +123,7 @@
                 <div class="product-cards__wrapper">
                   <p class="product-cards__price">1 200 руб.</p>
                   <div class="product-cards__order">
-                    <svg class="product-cards__icon" width="21" height="18">
+                    <svg class="product-cards__icon modal-link" width="21" height="18">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
                     <span class="visually-hidden">положить в корзину</span>
@@ -148,7 +148,7 @@
                 <div class="product-cards__wrapper">
                   <p class="product-cards__price">690 руб.</p>
                   <div class="product-cards__order">
-                    <svg class="product-cards__icon" width="21" height="18">
+                    <svg class="product-cards__icon modal-link" width="21" height="18">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
                     <span class="visually-hidden">положить в корзину</span>
@@ -173,7 +173,7 @@
                 <div class="product-cards__wrapper">
                   <p class="product-cards__price">1 500 руб.</p>
                   <div class="product-cards__order">
-                    <svg class="product-cards__icon" width="21" height="18">
+                    <svg class="product-cards__icon modal-link" width="21" height="18">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
                     <span class="visually-hidden">положить в корзину</span>
@@ -184,7 +184,7 @@
           </li>
         </ul>
       </section>
-      <section class="product-process container container--section">
+      <section class="product-process container section-container">
         <div class="product-process__wrapper">
           <div class="product-process__title-wrapper">
             <svg class="product-process__icon" width="32" height="22">
@@ -211,7 +211,7 @@
       </section>
     </main>
     <footer class="main-footer">
-      <div class="main-footer__wrapper container container--section">
+      <div class="main-footer__wrapper container section-container">
         <a class="main-footer__logo" href="index.html">
           <svg class="main-footer__icon" width="102" height="34">
             <use xlink:href="#footer-logo"></use>
@@ -256,6 +256,36 @@
         </div>
       </div>
     </footer>
+    <section class="modal">
+      <div class="modal__container">
+        <h2 class="modal__title">
+          Добавить в корзину
+        </h2>
+        <div class="modal__info">
+          <form class="modal__form" method="get">
+            <fieldset class="modal__fieldset">
+              <p class="modal__text">Выберите размер:</p>
+              <ul class="modal__list">
+                <li class="modal__item modal__item--active">
+                  <input class="modal__input visually-hidden" type="radio" name="size" id="size-s" value="s" checked>
+                  <label class="modal__label" for="size-s">S</label>
+                </li>
+                <li class="modal__item">
+                  <input class="modal__input visually-hidden" type="radio" name="size" id="size-m" value="m">
+                  <label class="modal__label" for="size-m">M</label>
+                </li>
+                <li class="modal__item">
+                  <input class="modal__input visually-hidden" type="radio" name="size" id="size-l" value="l">
+                  <label class="modal__label" for="size-l">L</label>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+          <button class="modal__button button" type="button">Добавить</button>
+        </div>
+      </div>
+    </section>
     <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>
